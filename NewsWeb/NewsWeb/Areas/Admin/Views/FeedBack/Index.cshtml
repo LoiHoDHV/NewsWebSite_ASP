@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Model.EF.FeedBack>
+
+@{
+    ViewBag.Title = "Phản hồi";
+    Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
+}
+@section header{
+    Danh sách phản hồi
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+
+        <th>#</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+
+            <td>
+                
+                <a href="/Admin/FeedBack/ViewDetail/@item.ID">Xem chi Tiết</a>||
+                <a href="/Admin/FeedBack/Delete/@item.ID">Xóa</a>
+            </td>
+        </tr>
+    }
+
+</table>

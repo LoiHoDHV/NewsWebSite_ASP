@@ -1,0 +1,65 @@
+﻿@model PagedList.IPagedList<Model.EF.News>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //var listNews = (IEnumerable<Model.EF.News>)ViewBag.ListNews;
+}
+@section headerIndex{
+    @* Cái phần này hiển thị trên trang con!! *@
+    <header class="masthead" style="background-image: url('/assets/client/assets/img/home-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-12 col-lg-12 col-xl-12">
+                    <div class="site-heading">
+                        <h1>The News York Times</h1>
+                        <span class="subheading">Nhóm 6 cosplay</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </header>}
+<div class="container px-5 px-lg-5">
+    <div class="row gx-5 gx-lg-5 justify-content-center">
+        <div class="col-md-12 col-lg-12 col-xl-12">
+            @foreach (var item in Model)
+            {
+                <!-- Post preview-->
+
+                var url = "/chi-tiet/" + item.Alias + "-" + item.ID;
+                <div class="post-preview">
+                    <img src="@item.Image" alt="@item.Name" class="img-fluid" />
+                    <a href="@url">
+                        <h2 class="post-title">@item.Name</h2>
+                        <h3 class="post-subtitle">@item.SmallDescription</h3>
+                    </a>
+                    <p class="post-meta">
+                        Danh mục: @item.CategoryID |
+                        Tags: <a href="@item.Tags">@item.Tags</a>
+                    </p>
+                    <p class="post-meta">
+                        @item.CreatedDate
+                    </p>
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+            }
+
+            <!-- Pager-->
+            <div class="d-flex justify-content-center mb-4">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+            </div>
+            <!-- Pager-->
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿@model Model.EF.About
+@{
+    ViewBag.Title = "Giới thiệu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section headerCon{
+    <header class="masthead" style="background-image: url('/assets/client/assets/img/about-bg.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>@Model.Name</h1>
+                        <span class="subheading">@Model.SmallDescription</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+}
+<main class="mb-4">
+    <div class="container px-5 px-lg-5">
+        <div class="row gx-5 gx-lg-5 justify-content-center">
+            <div class="col-md-12 col-lg-12 col-xl-12">
+                @Html.Raw(Model.Description)
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+

@@ -1,0 +1,6 @@
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\bin\Debug\Common.dll
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\bin\Debug\Common.pdb
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\obj\Debug\Common.dll
+E:\OnlineWebSiteNews\Website4\NewsWeb\Common\obj\Debug\Common.pdb

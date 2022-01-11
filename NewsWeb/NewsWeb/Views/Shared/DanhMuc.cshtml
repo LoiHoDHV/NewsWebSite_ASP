@@ -1,0 +1,10 @@
+﻿
+@model List<Model.EF.NewsCategory>
+
+
+@foreach (var item in Model)
+{
+    var Url = "/danh-muc/" + item.MetaTitle + "-" + item.ID;
+    <li class="list-group-item"><a class="nav-link px-lg-1 py-1 py-lg-1" href="@Url">@item.Name</a></li>
+}
+
