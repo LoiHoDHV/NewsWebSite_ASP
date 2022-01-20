@@ -60,13 +60,7 @@
                                     <td id="row_@item.ID">
                                         <a href="/Admin/User/Edit/@item.ID">Sửa</a>||
                                         <a href="/Admin/User/Delete/@item.ID">Xóa</a>
-                                        @*@Ajax.ActionLink("Xóa","Delete", new AjaxOptions
-                                            {
-                                                Confirm = "Bạn có muốn xóa user này không?",
-                                                OnComplete = "$('#row'"+item.ID +"').remove()",
-                                                HttpMethod = "Delete"
-
-                                            })*@
+                                        
                                     </td>
 
                                 </tr>

@@ -121,11 +121,7 @@ namespace Model.Dao
             }
             return news.ID;
         }
-        public void RemoveAllContentTag(long newsID)
-        {
-            db.NewsTags.RemoveRange(db.NewsTags.Where(x => x.NewsID == newsID));
-            db.SaveChanges();
-        }
+       
 
         public bool CheckTag(string id)
         {

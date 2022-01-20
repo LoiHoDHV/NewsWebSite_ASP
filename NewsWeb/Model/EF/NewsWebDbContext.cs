@@ -17,11 +17,11 @@ namespace Model.EF
         public virtual DbSet<FeedBack> FeedBacks { get; set; }
         public virtual DbSet<Footer> Footers { get; set; }
         public virtual DbSet<Menu> Menus { get; set; }
-        public virtual DbSet<MenuType> MenuTypes { get; set; }
+        
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<NewsCategory> NewsCategories { get; set; }
         public virtual DbSet<NewsTag> NewsTags { get; set; }
-        public virtual DbSet<SystemConfig> SystemConfigs { get; set; }
+        
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -43,9 +43,7 @@ namespace Model.EF
                 .Property(e => e.TagID)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<SystemConfig>()
-                .Property(e => e.ID)
-                .IsUnicode(false);
+            
 
             modelBuilder.Entity<Tag>()
                 .Property(e => e.ID)

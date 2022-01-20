@@ -18,7 +18,7 @@ namespace NewsWeb.Controllers
             return View(enumerable);
         }
 
-        [ChildActionOnly] // thuộc tính này chỉ
+        [ChildActionOnly] 
         public ActionResult MainMenu()
         {
             var model = new MenuDao().ListMenu();
@@ -26,7 +26,7 @@ namespace NewsWeb.Controllers
         }
 
 
-        [ChildActionOnly] // thuộc tính này chỉ
+        [ChildActionOnly] 
         public ActionResult Footer()
         {
             var model = new FooterDao().GetFooter();

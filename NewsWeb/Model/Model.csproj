@@ -71,12 +71,10 @@
     <Compile Include="EF\FeedBack.cs" />
     <Compile Include="EF\Footer.cs" />
     <Compile Include="EF\Menu.cs" />
-    <Compile Include="EF\MenuType.cs" />
     <Compile Include="EF\News.cs" />
     <Compile Include="EF\NewsCategory.cs" />
     <Compile Include="EF\NewsTag.cs" />
     <Compile Include="EF\NewsWebDbContext.cs" />
-    <Compile Include="EF\SystemConfig.cs" />
     <Compile Include="EF\Tag.cs" />
     <Compile Include="EF\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

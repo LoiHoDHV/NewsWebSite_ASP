@@ -13,3 +13,10 @@ E:\OnlineWebSiteNews\Website4\NewsWeb\DBFile
 
 3. Mở nuget tải IpagedList.MVC gì gì đó cho hai mục Model và NewsWeb
 4. Enjoy moment
+
+
+
+
+git remote add origin https://github.com/LoiHoDHV/NewsWebSite_ASP.git
+git branch -M main
+git push -u origin main

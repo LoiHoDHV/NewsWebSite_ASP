@@ -32,6 +32,7 @@ namespace NewsWeb.Areas.Admin.Controllers
                     var userSession = new UserLogin();
                     userSession.UserName = user.Username;
                     userSession.UserID = user.ID;
+                   
                     Session.Add(Common.CommonConstants.USER_SESSION, userSession);
                     return RedirectToAction("Index", "Home");
                 }
